@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Launch a token. Split creator fees across multiple X accounts. Explore how capital flows through SPLITX.">
+  <title>SplitexPay - Split token fees through X Money</title>
+  <link rel="icon" href="/assets/split-pfp.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/launch.css">
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/analytics.css">
+  <link rel="stylesheet" href="/token-detail.css?v=birdeye-live-1">
+  <script src="/generated/wallet.js?v=token-pages-1" defer></script>
+  <script src="/flow.js" defer></script>
+  <script src="/launch.js" defer></script>
+  <script src="/token-ui.js?v=token-pages-1" defer></script>
+  <script src="/home.js" defer></script>
+  <script src="/analytics.js" defer></script>
+  <script src="/generated/chart.js?v=birdeye-live-1" defer></script>
+  <script src="/token-detail.js?v=birdeye-live-1" defer></script>
+  <script src="/app.js?v=token-pages-1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <aside id="sidebar" class="sidebar" aria-label="Sidebar">
+    <a class="brand" href="/" aria-label="SPLITX home"><span class="brand-mark"><img src="/assets/split-pfp.png" alt=""></span></a>
+    <button class="collapse icon-button" id="collapse" aria-label="Collapse sidebar" aria-expanded="true"></button>
+    <nav id="navigation" aria-label="Primary"></nav>
+    <a class="sidebar-bottom" href="https://x.com/Use_Split" target="_blank" rel="noopener noreferrer" aria-label="SplitexPay on X (@splitexpay)"><span class="profile-logo"><img src="/assets/split-pfp.png" alt=""></span><span class="profile-copy"><strong>SPLITX</strong><small>@splitexpay</small></span><span class="profile-x" aria-hidden="true">𝕏</span></a>
+  </aside>
+  <div class="page-shell">
+    <header class="topbar">
+      <button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open navigation" aria-expanded="false"></button>
+      <div class="search-wrap"><label class="search" for="search"><span id="search-icon"></span><input id="search" type="search" placeholder="Search tokens, accounts…" autocomplete="off" aria-label="Search tokens, tickers, contracts, X accounts or pages" aria-controls="search-results" aria-expanded="false"><kbd>/</kbd></label><div id="search-results" class="search-results" aria-label="Search results" hidden></div></div>
+      <div class="header-actions"><a class="button primary small" href="/launch">Launch</a><button class="button small wallet-button" id="wallet">Connect wallet</button></div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="site-footer" aria-label="Footer">
+      <div class="footer-identity"><a class="footer-name" href="/home">SplitexPay</a><p>© 2026 SplitexPay</p><div class="footer-socials" aria-label="Social accounts">
+        <a class="footer-social" href="https://x.com/Use_Split" target="_blank" rel="noopener noreferrer" aria-label="SplitexPay on X (@splitexpay)" title="@splitexpay on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.5 5.4 22H2.2l7.4-8.5L1.8 2h6.5l4.5 6.9Zm-1.1 18h1.7L7.4 3.9H5.6Z"/></svg></a>
+        <span class="footer-social" role="link" aria-disabled="true" aria-label="SPLITX on Telegram — link not available yet" title="Telegram link not available yet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 3-3.5 18c-.3 1.3-1 1.6-2.1.9l-5.3-3.9-2.5 2.4c-.3.3-.5.5-1 .5L8 15.4 18.2 6c.4-.4-.1-.6-.6-.3L5 13.6l-5.1-1.6c-1.1-.4-1.1-1.1.2-1.6L20 2.7c.9-.3 1.7.2 1.4 1.5Z" transform="translate(1 0) scale(.94)"/></svg></span>
+        <span class="footer-social" role="link" aria-disabled="true" aria-label="SPLITX on Discord — link not available yet" title="Discord link not available yet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4a20 20 0 0 0-4.9-1.5l-.6 1.2a18.4 18.4 0 0 0-5.6 0l-.6-1.2a20 20 0 0 0-4.9 1.5C.6 9 .1 13.5.4 17.9a20 20 0 0 0 6 3l1.2-2a13 13 0 0 1-1.9-.9l.5-.4a14 14 0 0 0 11.6 0l.5.4a13 13 0 0 1-1.9.9l1.2 2a20 20 0 0 0 6-3c.4-5.1-.9-9.6-3.3-13.5ZM8 15c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3S9.1 15 8 15Zm8 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Z"/></svg></span>
+      </div><p class="footer-disclaimer">Not affiliated with X Corp.</p></div>
+      <nav class="footer-column" aria-label="Product"><h2>Product</h2><a href="/explore">Explore</a><a href="/payments">Payments</a><a href="/analytics">Analytics</a><a href="/launch">Launch</a></nav>
+      <nav class="footer-column" aria-label="Protocol"><h2>Protocol</h2><a href="/capital-flow">Capital Flow</a><a href="/capital-flow#split-buybacks">$SPLITX</a><a href="/docs">Docs</a></nav>
+      <nav class="footer-column" aria-label="Legal"><h2>Legal</h2><span role="link" aria-disabled="true" title="Terms have not been published yet">Terms</span><span role="link" aria-disabled="true" title="Privacy policy has not been published yet">Privacy</span><a href="/docs#preview-status">Disclosures</a><span role="link" aria-disabled="true" title="Opt-out requests will be available at launch">Opt out</span></nav>
+    </footer>
+  </div>
+  <dialog id="wallet-dialog" aria-labelledby="wallet-title"><div class="dialog-head"><h2 id="wallet-title">Connect a wallet</h2><button class="icon-button" data-close aria-label="Close dialog">×</button></div><p>Choose a Robinhood Chain wallet to connect. You approve every transaction in your wallet.</p></dialog>
+  <dialog id="review-dialog" aria-labelledby="review-title"></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a418519efe2fc261',t:'MTc5MDQ4OTE0OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
