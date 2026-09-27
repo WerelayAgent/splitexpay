@@ -3,7 +3,7 @@ let launchDraft = null;
 let launchState = null;
 let imageLoadVersion = 0;
 const launchImageIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m4 18 6-6 4 4 3-3 4 4"/></svg>';
-const launchPumpIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#080808"/><g transform="translate(12 12) rotate(40)"><rect x="-4" y="-8" width="8" height="16" rx="4" fill="#83d9ad"/><path d="M-4 0v-4a4 4 0 0 1 8 0v4Z" fill="#e9fbf1"/></g></svg>';
+const launchPumpIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#080808"/><text x="12" y="16" fill="#83d9ad" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">P</text></svg>';
 
 function recipientInputs() {
   return launchRows.map((row, index) => `<div class="recipient-edit-row"><div class="launch-handle">${icon('search')}<input class="recipient-input" aria-label="X handle for recipient ${index + 1}" placeholder="X account handle" value="${esc(row.handle)}" data-row="${index}" data-field="handle" maxlength="16" autocomplete="off" spellcheck="false" required></div><div class="share-input"><input class="recipient-input" aria-label="Percentage for recipient ${index + 1}" type="number" min="0.01" max="100" step="0.01" value="${row.share}" data-row="${index}" data-field="share" required><span>%</span></div><button class="icon-button" type="button" aria-label="Remove recipient ${index + 1}" data-remove="${index}" ${launchRows.length === 2 ? 'disabled' : ''}>×</button></div>`).join('');
@@ -17,7 +17,7 @@ function launchPage() {
   launchState = {name: '', symbol: '', description: '', initialBuy: '', website: window.SplitexPay.website, telegram: '', x: '', paymentNote: 'Creator fees via SplitexPay', image: null};
   return `<div class="launch-page"><section class="launch-intro"><h1>Launch and split fees through X Money</h1><p>Launch a token on ponsfamily.com and share its creator fees across multiple X accounts. Choose the recipients and set their shares.</p></section>
     <div class="launch-workspace"><form id="launch-form" class="launch-form">
-      <div class="launch-form-head"><h2>Launch token</h2><span class="pump-pill">${launchPumpIcon} Pump</span></div>
+      <div class="launch-form-head"><h2>Launch token</h2><span class="pump-pill">${launchPumpIcon} ponsfamily.com</span></div>
       <fieldset><legend>Launch currency</legend><div class="currency-selected"><img src="/assets/solana-logo.svg" alt="">Launch with ETH</div><p class="launch-help">Your token trades in ETH on ponsfamily.com. ETH is also used for network fees.</p></fieldset>
       <section class="launch-recipient-section" aria-labelledby="recipient-title"><div class="launch-recipient-head"><span id="recipient-title" class="launch-field-label">X Money sent to</span><span>Share of recipient allocation</span></div><div id="launch-recipients" class="recipient-editor">${recipientInputs()}</div><div class="launch-recipient-actions"><button class="button" id="launch-add" type="button">${icon('plus')} Add recipient</button><div id="launch-total" class="split-total valid"><span>Total allocation</span><strong>100% / 100%</strong></div></div><p class="launch-help">Recipients share 80% of creator fees. Their percentages must add up to 100%.</p><p class="error" id="launch-error" role="alert"></p></section>
       <hr class="launch-divider">
